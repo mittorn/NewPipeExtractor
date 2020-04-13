@@ -4,6 +4,7 @@ import org.schabi.newpipe.extractor.services.media_ccc.MediaCCCService;
 import org.schabi.newpipe.extractor.services.peertube.PeertubeService;
 import org.schabi.newpipe.extractor.services.soundcloud.SoundcloudService;
 import org.schabi.newpipe.extractor.services.youtube.YoutubeService;
+import org.schabi.newpipe.extractor.services.test.TestService;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -39,6 +40,7 @@ public final class ServiceList {
     public static final SoundcloudService SoundCloud;
     public static final MediaCCCService MediaCCC;
     public static final PeertubeService PeerTube;
+    public static final TestService Test;
 
     /**
      * When creating a new service, put this service in the end of this list,
@@ -49,7 +51,8 @@ public final class ServiceList {
                     YouTube = new YoutubeService(0),
                     SoundCloud = new SoundcloudService(1),
                     MediaCCC = new MediaCCCService(2),
-                    PeerTube = new PeertubeService(3)
+                    PeerTube = new PeertubeService(3),
+                    Test = new TestService(4)
             ));
 
     /**
