@@ -15,8 +15,10 @@ import org.schabi.newpipe.extractor.services.media_ccc.extractors.MediaCCCSearch
 import org.schabi.newpipe.extractor.services.media_ccc.extractors.MediaCCCStreamExtractor;
 import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCConferenceLinkHandlerFactory;
 import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCConferencesListLinkHandlerFactory;
-import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCSearchQueryHandlerFactory;
-import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCStreamLinkHandlerFactory;*/
+import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCSearchQueryHandlerFactory;*/
+import org.schabi.newpipe.extractor.services.test.TestLinkHandlerFactory;
+import org.schabi.newpipe.extractor.services.test.TestKiosk;
+
 import org.schabi.newpipe.extractor.stream.StreamExtractor;
 import org.schabi.newpipe.extractor.subscription.SubscriptionExtractor;
 import org.schabi.newpipe.extractor.suggestion.SuggestionExtractor;
@@ -88,7 +90,7 @@ public class TestService extends StreamingService {
                 public KioskExtractor createNewKiosk(StreamingService streamingService,
                                                      String url,
                                                      String kioskId) throws ExtractionException, IOException {
-                    return new TestKiosk(MediaCCCService.this,
+                    return new TestKiosk(TestService.this,
                             new TestListLinkHandlerFactory().fromUrl(url), kioskId);
                 }
             }, new TestListLinkHandlerFactory(), "test");
