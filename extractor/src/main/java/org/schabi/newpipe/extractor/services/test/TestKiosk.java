@@ -20,7 +20,7 @@ import org.schabi.newpipe.extractor.services.test.TestInfoItemExtractor;
 import javax.annotation.Nonnull;
 import java.io.IOException;
 
-public class TestKiosk extends KioskExtractor<ChannelInfoItem> {
+public class TestKiosk extends KioskExtractor<StreamInfoItem> {
 
     private JsonObject doc;
 
@@ -51,7 +51,7 @@ public class TestKiosk extends KioskExtractor<ChannelInfoItem> {
     }
 
     @Override
-    public InfoItemsPage<ChannelInfoItem> getPage(String pageUrl) throws IOException, ExtractionException {
+    public InfoItemsPage<StreamInfoItem> getPage(String pageUrl) throws IOException, ExtractionException {
         return InfoItemsPage.emptyPage();
     }
 
