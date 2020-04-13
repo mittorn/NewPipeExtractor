@@ -6,7 +6,7 @@ import org.schabi.newpipe.extractor.utils.Parser;
 
 import java.util.List;
 
-public class TestLinkHandlerFactory extends ListLinkHandlerFactory {
+public class TestListLinkHandlerFactory extends ListLinkHandlerFactory {
 
     @Override
     public String getUrl(String id, List<String> contentFilter, String sortFilter) throws ParsingException {
