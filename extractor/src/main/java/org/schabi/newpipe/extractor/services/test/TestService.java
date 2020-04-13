@@ -62,7 +62,7 @@ public class TestService extends StreamingService {
 
     @Override
     public StreamExtractor getStreamExtractor(LinkHandler linkHandler) {
-        return null; //new MediaCCCStreamExtractor(this, linkHandler);
+        return new TestStreamExtractor(this, linkHandler);
     }
 
     @Override

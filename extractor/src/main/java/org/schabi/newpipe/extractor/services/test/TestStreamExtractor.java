@@ -139,7 +139,10 @@ public class TestStreamExtractor extends StreamExtractor {
             }
         }
         return audioStreams;*/
-        return null;
+        final List<AudioStream> audioStreams = new ArrayList<>();
+        audioStreams.add(new AudioStream("https://file-examples.com/wp-content/uploads/2017/11/file_example_OOG_5MG.ogg", MediaFormat.OGG, -1));
+        
+        return audioStreams;
     }
 
     @Override
@@ -167,7 +170,12 @@ public class TestStreamExtractor extends StreamExtractor {
         }
         return videoStreams;
         */
-        return null;
+        final List<VideoStream> videoStreams = new ArrayList<>();
+        videoStreams.add(new VideoStream("http://techslides.com/demos/sample-videos/small.mp4",
+                        MediaFormat.MPEG_4, "default mp4"));
+        videoStreams.add(new VideoStream("http://techslides.com/demos/sample-videos/small.webm",
+                        MediaFormat.WEBM, "default webm"));
+        return videoStreams;
     }
 
     @Override
