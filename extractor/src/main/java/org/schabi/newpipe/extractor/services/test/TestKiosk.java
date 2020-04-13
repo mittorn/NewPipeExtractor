@@ -29,7 +29,7 @@ public class TestKiosk extends KioskExtractor<ChannelInfoItem> {
 
     @Nonnull
     @Override
-    public InfoItemsPage<ChannelInfoItem> getInitialPage() throws IOException, ExtractionException {
+    public InfoItemsPage<StreamInfoItem> getInitialPage() throws IOException, ExtractionException {
         /*JsonArray conferences = doc.getArray("conferences");
         ChannelInfoItemsCollector collector = new ChannelInfoItemsCollector(getServiceId());
         for (int i = 0; i < conferences.size(); i++) {
@@ -37,7 +37,7 @@ public class TestKiosk extends KioskExtractor<ChannelInfoItem> {
         }
 
         return new InfoItemsPage<>(collector, "");*/
-        ChannelInfoItemsCollector collector = new ChannelInfoItemsCollector(getServiceId());
+        StreamInfoItemsCollector collector = new StreamInfoItemsCollector(getServiceId());
         collector.commit(new TestInfoItemExtractor("item1"));
         return new InfoItemsPage<>(collector, "");
     }
