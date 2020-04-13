@@ -13,7 +13,7 @@ import org.schabi.newpipe.extractor.exceptions.ParsingException;
 import org.schabi.newpipe.extractor.kiosk.KioskExtractor;
 import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
 //import org.schabi.newpipe.extractor.services.media_ccc.extractors.infoItems.MediaCCCConferenceInfoItemExtractor;
-
+import org.schabi.newpipe.extractor.services.test.TestInfoItemExtractor;
 import javax.annotation.Nonnull;
 import java.io.IOException;
 
@@ -38,7 +38,7 @@ public class TestKiosk extends KioskExtractor<ChannelInfoItem> {
 
         return new InfoItemsPage<>(collector, "");*/
         ChannelInfoItemsCollector collector = new ChannelInfoItemsCollector(getServiceId());
-        //collector.commit(TODO);
+        collector.commit(new TestInfoItemExtractor("item1"));
         return new InfoItemsPage<>(collector, "");
     }
 
