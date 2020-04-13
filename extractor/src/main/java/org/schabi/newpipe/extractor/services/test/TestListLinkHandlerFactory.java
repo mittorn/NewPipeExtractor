@@ -24,7 +24,7 @@ public class TestListLinkHandlerFactory extends ListLinkHandlerFactory {
         }
         throw new ParsingException("Could not get id from url: " + url);
         */
-        return "testid";
+        return "test";
     }
 
     @Override

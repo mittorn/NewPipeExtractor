@@ -52,7 +52,11 @@ public class TestKiosk extends KioskExtractor<StreamInfoItem> {
 
     @Override
     public InfoItemsPage<StreamInfoItem> getPage(String pageUrl) throws IOException, ExtractionException {
-        return InfoItemsPage.emptyPage();
+        StreamInfoItemsCollector collector = new StreamInfoItemsCollector(getServiceId());
+        collector.commit(new TestInfoItemExtractor("item1"));
+        return new InfoItemsPage<>(collector, "");
+
+//        return InfoItemsPage.emptyPage();
     }
 
     @Override
