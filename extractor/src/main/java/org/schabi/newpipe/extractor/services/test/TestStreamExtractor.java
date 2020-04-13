@@ -172,9 +172,9 @@ public class TestStreamExtractor extends StreamExtractor {
         */
         final List<VideoStream> videoStreams = new ArrayList<>();
         videoStreams.add(new VideoStream("http://techslides.com/demos/sample-videos/small.mp4",
-                        MediaFormat.MPEG_4, "default mp4"));
+                        MediaFormat.MPEG_4, "998p"));
         videoStreams.add(new VideoStream("http://techslides.com/demos/sample-videos/small.webm",
-                        MediaFormat.WEBM, "default webm"));
+                        MediaFormat.WEBM, "999p"));
         return videoStreams;
     }
 
