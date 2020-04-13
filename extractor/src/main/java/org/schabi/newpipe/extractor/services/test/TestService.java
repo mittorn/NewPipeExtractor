@@ -16,6 +16,7 @@ import org.schabi.newpipe.extractor.services.media_ccc.extractors.MediaCCCStream
 import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCConferenceLinkHandlerFactory;
 import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCConferencesListLinkHandlerFactory;
 import org.schabi.newpipe.extractor.services.media_ccc.linkHandler.MediaCCCSearchQueryHandlerFactory;*/
+import org.schabi.newpipe.extractor.services.test.TestStreamLinkHandlerFactory;
 import org.schabi.newpipe.extractor.services.test.TestListLinkHandlerFactory;
 import org.schabi.newpipe.extractor.services.test.TestKiosk;
 
@@ -41,7 +42,7 @@ public class TestService extends StreamingService {
 
     @Override
     public LinkHandlerFactory getStreamLHFactory() {
-        return null; //new MediaCCCStreamLinkHandlerFactory();
+        return new TestStreamLinkHandlerFactory();
     }
 
     @Override
