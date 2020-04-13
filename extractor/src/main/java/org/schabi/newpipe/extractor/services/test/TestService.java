@@ -46,7 +46,7 @@ public class TestService extends StreamingService {
 
     @Override
     public ListLinkHandlerFactory getChannelLHFactory() {
-        return TestListLinkHandlerFactory();
+        return new TestListLinkHandlerFactory();
     }
 
     @Override
