@@ -35,7 +35,7 @@ public class TestStreamLinkHandlerFactory extends LinkHandlerFactory {
         }*/
         return urlString;
 
-        throw new ParsingException("Could not get id from url: " + url);
+//        throw new ParsingException("Could not get id from url: " + urlString);
     }
 
     @Override
