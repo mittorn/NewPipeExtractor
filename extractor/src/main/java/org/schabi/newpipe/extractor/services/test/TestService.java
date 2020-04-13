@@ -44,7 +44,7 @@ public class TestService extends StreamingService {
 
     @Override
     public ListLinkHandlerFactory getChannelLHFactory() {
-        return null; //new MediaCCCConferenceLinkHandlerFactory();
+        return TestLinkHandlerFactory();
     }
 
     @Override
@@ -79,7 +79,7 @@ public class TestService extends StreamingService {
 
     @Override
     public KioskList getKioskList() throws ExtractionException {
-        /*KioskList list = new KioskList(this);
+        KioskList list = new KioskList(this);
 
         // add kiosks here e.g.:
         try {
@@ -88,17 +88,16 @@ public class TestService extends StreamingService {
                 public KioskExtractor createNewKiosk(StreamingService streamingService,
                                                      String url,
                                                      String kioskId) throws ExtractionException, IOException {
-                    return new MediaCCCConferenceKiosk(MediaCCCService.this,
-                            new MediaCCCConferencesListLinkHandlerFactory().fromUrl(url), kioskId);
+                    return new TestKiosk(MediaCCCService.this,
+                            new TestListLinkHandlerFactory().fromUrl(url), kioskId);
                 }
-            }, new MediaCCCConferencesListLinkHandlerFactory(), "conferences");
-            list.setDefaultKiosk("conferences");
+            }, new TestListLinkHandlerFactory(), "test");
+            list.setDefaultKiosk("test");
         } catch (Exception e) {
             throw new ExtractionException(e);
         }
 
-        return list;*/
-        return null;
+        return list;
     }
 
     @Override
